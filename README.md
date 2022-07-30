@@ -53,6 +53,7 @@ Note: A detailed description of IPW is mentioned in the Methodology section of t
 A Center of Excellence for Risked-Based Community Resilience Planning (CoE) was established by the National Institute of Standards and Technology (NIST) to develop measurement science to support community resilience assessments. The Independent Networked Community Resilience Modeling Environment (IN-CORE) platform is used to implement measurement science. IN-CORE enables quantitative comparisons of alternative resilience strategies by incorporating risk-based decision-making technologies. IN-CORE allows community-based data to be seamlessly integrated, facilitating planning and intelligent post-disaster recovery strategies based on models that include interdependent physical and socio-economic systems based on physics that are developed for community disaster resilience(IN-CORE, n.d.).
 
 ![image](https://user-images.githubusercontent.com/95768375/181948900-e0eaac5e-2405-4490-881f-1d61aa795e62.png)
+
 __Fig: IN-CORE Platform Usage__
 
 The Dataset of the Seaside Testbed was acquired from the INCORE Platform. As a student for the Community Resilience CORE Lab, I was given exclusive access to the INCORE platform and to INCORE Cloud, where most of the data is stored and constantly updated daily.
@@ -62,9 +63,11 @@ Therefore, All the members working on the data can access it. The obstacle I fac
 The Seaside Transportation Network Testbed Data set contains 585 rows and 14 features. The Dataset is as follows:
 
 ![image](https://user-images.githubusercontent.com/95768375/181949185-eb319b70-6fe2-419a-8f45-ef8d7bb36dc2.png)
+
 __Fig: Dataset of the Seaside Testbed with 585 rows and 14 columns__
 
 ![image](https://user-images.githubusercontent.com/95768375/181949850-c4bdbd73-3da0-4d1e-aba1-6f9d0ea9396a.png)
+
 The above represents the information about the 14 features of the Dataset of the Seaside testbed.
 The Dataset contains the nodes based on their geographical location and the distance between each of the nodes. For example, when you look at row 2, by looking at the start node and end node, we can determine that node 300 is connected to node 316, and the distance between these two nodes can be seen from the column 'length', which is 383.083680.
 
@@ -72,12 +75,15 @@ To illustrate, understand and visualize the data and perform network analysis on
 
 
 ![image](https://user-images.githubusercontent.com/95768375/181950112-41cb1eb9-bc94-47d9-8212-7ffa7ecfd469.png)
+
 __Fig: Converted Dataset of the Seaside Testbed to work on Geopandas Dataframe__
 
 ![image](https://user-images.githubusercontent.com/95768375/181950237-17a62c80-98c6-441e-a25c-49bafe464b68.png)
+
 __Fig: Original Map of the Seaside Testbed without any Implementation__
 
 ![image](https://user-images.githubusercontent.com/95768375/181950350-88f766a6-5d7d-412d-b525-34b1b48fee50.png)
+
 __Fig: Implementation of Linestrings on Seaside Map using GeoPandas__
 
 
@@ -87,17 +93,20 @@ The Geopandas implementation of the Seaside transportation network, which contai
 
 ![image](https://user-images.githubusercontent.com/95768375/181950649-77f729b9-85ca-4c69-be38-1e7ca3da1ea0.png)
 ![image](https://user-images.githubusercontent.com/95768375/181950715-aba49108-1fe5-486d-a6a6-159be15b2146.png)
+
 __Fig: Representation of Emergency Locations in the Seaside Testbed using GeoPandas__
 
 
 Using Momepy and Matplotlib Library, I have plotted the nodes to specifically understand how the Network is divided; is it either by the community or by street, etc. 
 
 ![image](https://user-images.githubusercontent.com/95768375/181950848-7b69673d-bfa9-47d7-bbde-0a56ae3c4b41.png)
+
 __Fig: Original Seaside Testbed vs. Nodes Plotted Testbed using Momepy and NetworkX__
 
 Based on the above node point representation, each node represents the starting and ending points of a street, with a few nodes representing the bridges. 
 
 ![image](https://user-images.githubusercontent.com/95768375/181951016-5755cbcd-659e-4c0b-a231-e936ed430913.png)
+
 __Fig: Represents the Original graph vs. Primal Graph vs. Overlay graph__
 
 The image above depicts the initial map of the Seaside Testbed retrieved from Open Street Map, followed by the Primal Graph drawn using the Momepy and NetworkX, and finally the final map. The final image shows a street overlay over a primordial graph to show how closely the original map and created network graph are connected. We can plainly detect a minor divergence of the geographical spots in the Overlay image. However, the majority of the points are correctly labeled and plotted.
@@ -124,6 +133,7 @@ __Independent Pathway(IPW):__
 Two pathways between the same Origin and Destination pair are considered Independent Pathways (IPW) if they do not share any common link. 
 
 ![image](https://user-images.githubusercontent.com/95768375/181951993-3a44897e-f552-40f2-9cce-8af6d1ea1caf.png)
+
 __Fig: Example Node and Edge Representation to understand IPW__
 
 __For Example:__ In the above figure illustrates a basic example of a network. Assuming, Node 6 is the Source node and Node 4 is the Sink node. We calculate the independent pathways such that they do not share any common edges. From the above example, you can see that node 6 is connected to Nodes 3, 4, 7, and 9. And to Reach Node 4, there are 4 ways. {6 – 3 – 4 }, {6 – 4 },  {6 – 7 – 4} , {6 – 9 – 7 – 4} 
@@ -150,6 +160,7 @@ We achieve the technique to re-initiate the Independent Pathways in our problem 
 Maximum Flow Algorithm: According to graph theory, a flow network with a source(s), sink(t), and multiple edges have individual capacities that determine how much Flow they can accommodate. Identifying the maximum flow problem can be accomplished by multiple algorithms. The three most recommended algorithms for calculating the maximum Flow are Ford-Fulkerson, Dinic's, and Edmond Karp. 
 
 ![image](https://user-images.githubusercontent.com/95768375/181952916-0e92c2c0-c9c7-4ff9-9013-90b6ab5092f7.png)
+
 __Fig: Maximum Flow Optimization Model__
 
 In this project, different types of maximum flow algorithms are used in NetworkX to find the best efficient algorithm to find the independent pathways, and they are as follows:
