@@ -1,6 +1,6 @@
 # Analysis of Disrupted Transportation Network in Multi-Hazard Scenario
 
-## Author ### __Aditya Kasturi__ 
+## Author : __Aditya Kasturi__ 
 
 ### 1.	INTRODUCTION
 
