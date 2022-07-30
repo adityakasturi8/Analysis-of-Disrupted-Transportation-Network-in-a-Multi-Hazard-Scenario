@@ -1,7 +1,7 @@
 # Analysis of Disrupted Transportation Network in Multi-Hazard Scenario
 
 ## Author
-__name : __ Aditya Kasturi 
+__Aditya Kasturi__ 
 
 ## Acknowldgement
  
@@ -202,3 +202,6 @@ NetworkX — NetworkX documentation. (n.d.). Retrieved July 14, 2022, from https
 Zhang, W., & Wang, N. (2016). Resilience-based risk mitigation for road networks. Structural Safety, 62, 57–65. https://doi.org/10.1016/j.strusafe.2016.06.003
 Zhang, W., Wang, N., & Nicholson, C. (2017). Resilience-based post-disaster recovery strategies for road-bridge networks. Structure and Infrastructure Engineering, 13(11), 1404–1413. https://doi.org/10.1080/15732479.2016.1271813
 
+### Acknowledgement
+__Advisor__ : Charles D. Nicholson 
+__Team__: Himadri Sen Gupta & Ahmad Ghasemkhani
